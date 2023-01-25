@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
-    "@unocss/reset": "^0.48.0",
+    "@unocss/reset": "^0.49.0",
     "notiwind": "^1.2.6",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
