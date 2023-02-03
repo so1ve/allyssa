@@ -24,7 +24,7 @@
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
     "@iconify-json/carbon": "^1.1.11",
-    "@so1ve/eslint-config": "^0.34.0",
+    "@so1ve/eslint-config": "^0.45.0",
     "@tauri-apps/cli": "^1.2.2",
     "@types/node": "^18.7.10",
     "@vitejs/plugin-vue": "^4.0.0",
