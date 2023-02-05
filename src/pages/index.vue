@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ElMessage } from "element-plus";
+
 const newDocumentName = $ref("");
-let notification = $ref(null as null | string);
-let showNotification = $ref(false);
 let documentNames = $ref([] as string[]);
 
 const fetchDocuments = async() => {
@@ -13,31 +13,25 @@ onMounted(fetchDocuments);
 const onAdd = async() => {
   if (!newDocumentName) { return; }
   try {
-    notification = await newDocument(newDocumentName);
+    const res = await newDocument(newDocumentName);
+    if (res) {
+      ElMessage.error(res);
+      return;
+    }
   } catch (e: any) {
-    notification = e;
+    ElMessage.error(e);
   }
-  showNotification = true;
-  setTimeout(() => showNotification = false, 2000);
   await fetchDocuments();
 };
 </script>
 
 <template>
   <div flex="~ gap-3 wrap">
-    <Input v-model="newDocumentName" w-full placeholder="Enter new document name..." />
-    <Button w-full justify-center :disabled="showNotification" @click="onAdd">
+    <ElInput v-model="newDocumentName" w-full placeholder="Enter new document name..." />
+    <ElButton w-full justify-center type="primary" @click="onAdd">
       <span i-carbon-add />
       New Document
-    </Button>
-    <Notification v-show="showNotification && !notification" w-full justify-center>
-      <span i-carbon-checkmark />
-      Created successfully!
-    </Notification>
-    <Notification v-show="showNotification && notification" type="error" w-full justify-center>
-      <span i-carbon-close />
-      {{ notification }}
-    </Notification>
+    </ElButton>
   </div>
   <ItemList :names="documentNames" />
 </template>

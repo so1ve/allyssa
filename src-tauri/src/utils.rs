@@ -1,9 +1,5 @@
 use std::path::PathBuf;
 
-// Get the path to the document directory
-// E.g on windows: C:\Users\username\Documents\AllyssaDocuments
-// on linux: /home/username/Documents/AllyssaDocuments
-// on mac: /Users/username/Documents/AllyssaDocuments
 pub fn resolve_documents_path() -> PathBuf {
     let mut path = dirs::document_dir().unwrap();
     path.push("AllyssaDocuments");

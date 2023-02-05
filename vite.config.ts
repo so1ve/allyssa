@@ -7,6 +7,7 @@ import Layouts from "vite-plugin-vue-layouts";
 import Pages from "vite-plugin-pages";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig({
   plugins: [
@@ -22,6 +23,15 @@ export default defineConfig({
     Pages(),
     Components({
       dts: "./src/components.d.ts",
+      resolvers: [
+        ElementPlusResolver(),
+      ],
+      types: [
+        {
+          from: "vue-router",
+          names: ["RouterLink", "RouterView"],
+        },
+      ],
     }),
     AutoImport({
       imports: [
@@ -37,6 +47,7 @@ export default defineConfig({
           ],
         },
       ],
+      resolvers: [ElementPlusResolver()],
       dirs: [
         "./src/composables/*",
       ],

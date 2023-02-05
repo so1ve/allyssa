@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     Button: typeof import('./components/Button.vue')['default']
     copy: typeof import('./components/Notification.vue')['default']
     Editor: typeof import('./components/Editor.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElInput: typeof import('element-plus/es')['ElInput']
     Input: typeof import('./components/Input.vue')['default']
     Item: typeof import('./components/Item.vue')['default']
     ItemList: typeof import('./components/ItemList.vue')['default']
