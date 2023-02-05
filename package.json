@@ -15,8 +15,12 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
+<<<<<<< HEAD
     "@unocss/reset": "^0.47.6",
     "element-plus": "^2.2.27",
+=======
+    "@unocss/reset": "^0.48.0",
+>>>>>>> 10c32b2164f757f42067621565fc78b084eeb546
     "notiwind": "^1.2.6",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
@@ -25,14 +29,14 @@
   "devDependencies": {
     "@antfu/ni": "^0.18.8",
     "@iconify-json/carbon": "^1.1.11",
-    "@so1ve/eslint-config": "^0.32.3",
+    "@so1ve/eslint-config": "^0.34.0",
     "@tauri-apps/cli": "^1.2.2",
     "@types/node": "^18.7.10",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue-macros/volar": "^0.5.6",
     "eslint": "^8.30.0",
     "typescript": "^4.6.4",
-    "unocss": "^0.47.6",
+    "unocss": "^0.48.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-macros": "^1.1.1",
